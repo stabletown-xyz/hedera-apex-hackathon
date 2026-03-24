@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Munus Lite Guided Judge Walkthrough",
+    "subtitle": "Buyer-side municipal distribution workflow",
+    "labels": {
+      "guided": "Guided demo state",
+      "proof": "Precomputed submission evidence",
+      "walkthrough": "Non-destructive walkthrough"
+    },
+    "truthfulness": {
+      "hosted_page": "This hosted page is a guided walkthrough of the submitted Munus Lite workflow using frozen submission evidence.",
+      "proof_links": "Proof links and bundle flags are live references to the exported strict-live submission bundle.",
+      "state": "Workflow states shown here are non-destructive and do not submit new on-chain actions."
+    }
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "title": "Step 1: Path, persona, permissions",
+      "description": "Pick the guided path, role perspective, and execution context before touching workflow states.",
+      "highlights": [
+        "Sandbox-scoped execution context",
+        "Persona-aware review prompts",
+        "Audit/outbox guarantees are represented in each state card"
+      ]
+    },
+    {
+      "id": "step-2",
+      "title": "Step 2: Choose offering",
+      "description": "Select an offering package and confirm document/disclosure posture before buyer-side operations.",
+      "highlights": [
+        "Offering metadata and package assumptions",
+        "Document attachment integrity",
+        "Disclosure publication checkpoints"
+      ]
+    },
+    {
+      "id": "step-3",
+      "title": "Step 3: Deploy preflight + execution context",
+      "description": "Review preflight controls, custody signing narrative, and transfer/coupon policy touchpoints.",
+      "highlights": [
+        "Signer-backed operation narrative",
+        "Transfer compliance controls",
+        "Coupon/payment lifecycle touchpoint"
+      ]
+    },
+    {
+      "id": "step-4",
+      "title": "Step 4: Deployment status + proof / next actions",
+      "description": "Inspect strict-live proof links, HTS + EVM evidence, and native lifecycle paths.",
+      "highlights": [
+        "Strict-live proof references",
+        "HTS + EVM deployment artifacts",
+        "Native lifecycle path evidence"
+      ]
+    }
+  ],
+  "personas": [
+    {
+      "id": "issuer_finance",
+      "name": "Issuer Finance",
+      "what_to_check": "Offering package completeness, buyer-side constraints, and coupon payment readiness.",
+      "decision": "Approve the offering package for municipal distribution controls.",
+      "next_step": "Click Step 2"
+    },
+    {
+      "id": "municipal_advisor",
+      "name": "Municipal Advisor",
+      "what_to_check": "Disclosure publication posture and signer-backed attestations.",
+      "decision": "Confirm disclosures are published and advisory evidence is attached.",
+      "next_step": "Click Step 3"
+    },
+    {
+      "id": "issuer_admin",
+      "name": "Issuer Admin",
+      "what_to_check": "Preflight controls, execution context, and deployment guardrails.",
+      "decision": "Authorize progression to deployment visibility state.",
+      "next_step": "Click Step 4"
+    },
+    {
+      "id": "custody_transfer_agent",
+      "name": "Custody / Transfer Agent",
+      "what_to_check": "Transfer checks, custody signing narrative, and deployment tx references.",
+      "decision": "Confirm transfer controls and custody evidence align with policy.",
+      "next_step": "Open deployment + proof panel"
+    },
+    {
+      "id": "auditor",
+      "name": "Auditor",
+      "what_to_check": "Proof flags, required slots, and native lifecycle path evidence.",
+      "decision": "Validate strict-live proof completeness against bundle expectations.",
+      "next_step": "Review proof integrity section"
+    }
+  ],
+  "offerings": [
+    {
+      "id": "munus-lite-series-a",
+      "name": "Munus Lite Series A (Sandbox)",
+      "description": "Guided buyer-side municipal distribution workflow package for sandbox-scoped rehearsal.",
+      "path": "Use seeded bond data",
+      "execution_context": "sandbox-scoped",
+      "permissions": "tenant_admin (guided display only)",
+      "documents": {
+        "status": "attached",
+        "items": [
+          "Preliminary financing memo",
+          "Program policy digest",
+          "Offering controls checklist"
+        ],
+        "demonstrates": "Offering bootstrap / document attachment"
+      },
+      "disclosures": {
+        "status": "published",
+        "items": [
+          "Risk summary disclosed",
+          "Advisor signoff captured",
+          "Disclosure acknowledgement stored"
+        ],
+        "demonstrates": "Disclosure publication / signer-backed operation"
+      },
+      "investor": {
+        "approval_status": "allowlisted",
+        "purchase_status": "recorded",
+        "items": [
+          "Investor approval recorded",
+          "Purchase intent logged",
+          "Idempotent evidence retained"
+        ],
+        "demonstrates": "Investor approval + purchase"
+      },
+      "transfer_check": {
+        "status": "approved_with_controls",
+        "items": [
+          "Transfer eligibility check passed",
+          "Policy decision attached",
+          "Case escalation path defined"
+        ],
+        "demonstrates": "Transfer compliance check / decision"
+      },
+      "coupon": {
+        "status": "scheduled",
+        "items": [
+          "Coupon event prepared",
+          "Settlement trace recorded",
+          "Lifecycle checkpoint documented"
+        ],
+        "demonstrates": "Coupon payment"
+      },
+      "deployment": {
+        "status": "confirmed",
+        "items": [
+          "HTS + EVM strict-live proof available",
+          "Native lifecycle path evidence confirmed",
+          "Deployment + tx intent references attached"
+        ],
+        "demonstrates": "Deployment / proof visibility"
+      }
+    },
+    {
+      "id": "munus-lite-series-b",
+      "name": "Munus Lite Series B (Companion)",
+      "description": "Companion sandbox package showing the same non-destructive workflow with alternate offering metadata.",
+      "path": "Build custom test bond",
+      "execution_context": "sandbox-scoped",
+      "permissions": "tenant_admin (guided display only)",
+      "documents": {
+        "status": "attached",
+        "items": [
+          "Offering memo (companion)",
+          "Disclosure annex",
+          "Program controls matrix"
+        ],
+        "demonstrates": "Offering bootstrap / document attachment"
+      },
+      "disclosures": {
+        "status": "published",
+        "items": [
+          "Disclosure publication complete",
+          "Signer-backed note archived",
+          "Reviewer acknowledgement captured"
+        ],
+        "demonstrates": "Disclosure publication / signer-backed operation"
+      },
+      "investor": {
+        "approval_status": "allowlisted",
+        "purchase_status": "recorded",
+        "items": [
+          "Investor role approval captured",
+          "Purchase record linked",
+          "Replay-safe idempotency reference"
+        ],
+        "demonstrates": "Investor approval + purchase"
+      },
+      "transfer_check": {
+        "status": "approved_with_controls",
+        "items": [
+          "Transfer check evaluated",
+          "Decision output preserved",
+          "Manual review fallback documented"
+        ],
+        "demonstrates": "Transfer compliance check / decision"
+      },
+      "coupon": {
+        "status": "scheduled",
+        "items": [
+          "Coupon instruction staged",
+          "Payment lifecycle marker present",
+          "Audit/outbox trail referenced"
+        ],
+        "demonstrates": "Coupon payment"
+      },
+      "deployment": {
+        "status": "confirmed",
+        "items": [
+          "Strict-live bundle alignment retained",
+          "Proof links resolve on Hashscan",
+          "Lifecycle path remains native"
+        ],
+        "demonstrates": "Deployment / proof visibility"
+      }
+    }
+  ],
+  "role_handoffs": [
+    {
+      "role": "Issuer Finance",
+      "what_to_look_at": "Offering documents, policy package, and coupon readiness.",
+      "decision_or_evidence": "Confirm buyer-side municipal distribution workflow baseline.",
+      "next_click": "Step 2"
+    },
+    {
+      "role": "Municipal Advisor",
+      "what_to_look_at": "Disclosure publication and signer-backed operation narrative.",
+      "decision_or_evidence": "Validate guidance checkpoints before execution context review.",
+      "next_click": "Step 3"
+    },
+    {
+      "role": "Issuer Admin",
+      "what_to_look_at": "Preflight checklist and execution context controls.",
+      "decision_or_evidence": "Authorize progression to deployment proof visibility.",
+      "next_click": "Step 4"
+    },
+    {
+      "role": "Custody / Transfer Agent",
+      "what_to_look_at": "Transfer-check decision card and deployment tx references.",
+      "decision_or_evidence": "Confirm custody signing narrative and control evidence.",
+      "next_click": "Deployment + Proof panel"
+    },
+    {
+      "role": "Auditor",
+      "what_to_look_at": "Proof flags, required slots, and strict-live bundle metadata.",
+      "decision_or_evidence": "Verify HTS + EVM and native lifecycle path evidence.",
+      "next_click": "Proof Integrity section"
+    }
+  ],
+  "what_this_proves": [
+    "Compliant buyer-side municipal distribution workflow",
+    "Signer-backed operation narrative",
+    "Transfer compliance controls",
+    "Coupon/payment lifecycle touchpoint",
+    "Strict-live HTS + EVM proof",
+    "Native lifecycle path evidence",
+    "Audit/outbox guarantees mapped to submission evidence"
+  ]
+}

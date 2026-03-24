@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Munus Lite — Hedera Apex Judge Demo</title>
-    <meta
-      http-equiv="refresh"
-      content="2; url=./frontend/apex-judge-miniapp/index.html"
-    />
+    <meta http-equiv="refresh" content="10; url=./frontend/apex-judge-miniapp/index.html" />
     <style>
       :root {
         color-scheme: light;
@@ -19,7 +16,7 @@
         color: #1f2937;
       }
       main {
-        max-width: 720px;
+        max-width: 820px;
         margin: 8vh auto;
         padding: 1.5rem;
       }
@@ -38,11 +35,32 @@
         border: 1px solid #dbe4ee;
         border-radius: 0.75rem;
       }
-      a {
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .button.primary {
+        background: #0f4ea8;
+        color: #ffffff;
+      }
+      .button.secondary {
+        background: #eaf3ff;
         color: #0f4ea8;
       }
       .muted {
         color: #4b5563;
+      }
+      a {
+        color: #0f4ea8;
       }
     </style>
   </head>
@@ -50,39 +68,43 @@
     <main>
       <h1>Munus Lite — Hedera Apex Judge Demo</h1>
       <p>
-        Public proof viewer for the Hedera Apex submission mirror.
+        Public guided, non-destructive walkthrough of the submitted Munus Lite buyer-side municipal distribution workflow,
+        backed by frozen strict-live submission evidence.
       </p>
       <p><strong>No login required.</strong></p>
 
       <section class="card">
-        <p class="muted">
-          Redirecting to the judge mini-app...
-        </p>
-        <p>
-          If redirect does not run, open
-          <a href="./frontend/apex-judge-miniapp/index.html"
-            >Judge Mini-App</a
-          >.
-        </p>
+        <p class="muted">Choose how to review this submission mirror:</p>
+        <div class="buttons">
+          <a class="button primary" href="./frontend/apex-judge-miniapp/index.html">Open Guided Demo</a>
+          <a class="button secondary" href="./artifacts/hedera_apex_judge_demo_bundle.json">Open Proof Bundle</a>
+          <a class="button secondary" href="./docs/challenges/hedera-apex/submission-manifest.md">Open Submission Manifest</a>
+        </div>
       </section>
 
       <section class="card">
-        <p>Optional submission references:</p>
-        <p>
-          <a href="./docs/challenges/hedera-apex/submission-manifest.md"
-            >Submission Manifest</a
-          >
+        <p class="muted" id="redirect-note">
+          You will be redirected to the guided demo shortly.
         </p>
         <p>
-          <a href="./artifacts/hedera_apex_judge_demo_bundle.json"
-            >Strict-Live Bundle JSON</a
-          >
+          If redirect does not run, open
+          <a href="./frontend/apex-judge-miniapp/index.html">the guided demo directly</a>.
         </p>
       </section>
     </main>
 
     <script>
-      window.location.replace("./frontend/apex-judge-miniapp/index.html");
+      const note = document.getElementById("redirect-note");
+      let countdown = 10;
+      const timer = setInterval(() => {
+        countdown -= 1;
+        if (countdown <= 0) {
+          clearInterval(timer);
+          window.location.replace("./frontend/apex-judge-miniapp/index.html");
+          return;
+        }
+        note.textContent = `You will be redirected to the guided demo in ${countdown}s.`;
+      }, 1000);
     </script>
   </body>
 </html>

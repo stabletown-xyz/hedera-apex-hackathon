@@ -1,11 +1,18 @@
 :root {
-  --bg: #f3f5f7;
+  --bg: #f3f6fa;
   --panel: #ffffff;
   --ink: #18212f;
-  --muted: #5a677b;
-  --line: #d9e0ea;
-  --good: #0c7a43;
-  --bad: #a62626;
+  --muted: #586477;
+  --line: #d5deea;
+  --good: #0f7a43;
+  --bad: #a52d2d;
+  --accent: #0f4ea8;
+  --tag-guided-bg: #e8f2ff;
+  --tag-guided-ink: #0d3f88;
+  --tag-proof-bg: #eaf8ee;
+  --tag-proof-ink: #0b6a38;
+  --tag-walk-bg: #fff4d8;
+  --tag-walk-ink: #8f6000;
 }
 
 * {
@@ -14,42 +21,17 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #fdf9ef 0%, var(--bg) 50%);
   color: var(--ink);
+  background: radial-gradient(circle at top, #fff8e9 0%, var(--bg) 48%);
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
 }
 
 .shell {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 24px;
   display: grid;
   gap: 16px;
-}
-
-.hero {
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
-}
-
-.kicker {
-  margin: 0;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-h1 {
-  margin: 8px 0;
-  font-size: 34px;
-}
-
-h2 {
-  margin: 0 0 10px 0;
-  font-size: 20px;
 }
 
 .card {
@@ -59,20 +41,197 @@ h2 {
   padding: 16px;
 }
 
-pre {
-  white-space: pre-wrap;
-  font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
-  color: var(--muted);
-  margin: 0;
+.hero {
+  background: linear-gradient(140deg, #ffffff 0%, #edf4ff 100%);
 }
 
-ul {
+.kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+h3 {
+  margin: 14px 0 8px;
+  font-size: 1.05rem;
+}
+
+.lede {
+  margin: 0.4rem 0;
+  color: #2b3445;
+}
+
+.truth {
+  margin: 0.4rem 0;
+  color: #2d3a4f;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.controls {
+  display: grid;
+  gap: 14px;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 8px;
+}
+
+.step-btn {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #f7faff;
+  color: #213252;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+}
+
+.step-btn.active {
+  border-color: #6ea1eb;
+  background: #eaf3ff;
+  box-shadow: inset 0 0 0 1px #b6d2fb;
+}
+
+.selectors {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+select {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.flow-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: #fbfdff;
+}
+
+.flow-card h3 {
+  margin-top: 0;
+}
+
+.status-line {
+  margin: 4px 0 10px;
+  color: #2d3a4f;
+  font-weight: 600;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.77rem;
+  font-weight: 700;
+}
+
+.tag.guided {
+  background: var(--tag-guided-bg);
+  color: var(--tag-guided-ink);
+}
+
+.tag.proof {
+  background: var(--tag-proof-bg);
+  color: var(--tag-proof-ink);
+}
+
+.tag.walk {
+  background: var(--tag-walk-bg);
+  color: var(--tag-walk-ink);
+}
+
+ul,
+ol {
   margin: 0;
   padding-left: 20px;
 }
 
-li {
-  margin: 4px 0;
+.plain-list li,
+.flow-card li {
+  margin: 5px 0;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  color: #2e3b52;
+  font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+}
+
+.handoffs {
+  display: grid;
+  gap: 10px;
+}
+
+.handoff {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fafcff;
+}
+
+.handoff h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.handoff p {
+  margin: 5px 0;
+}
+
+.proof-links {
+  margin-top: 10px;
+}
+
+.proof-links li {
+  margin: 6px 0;
+}
+
+a {
+  color: var(--accent);
 }
 
 .good {
@@ -81,4 +240,14 @@ li {
 
 .bad {
   color: var(--bad);
+}
+
+@media (max-width: 700px) {
+  .shell {
+    padding: 14px;
+  }
+
+  .card {
+    padding: 12px;
+  }
 }

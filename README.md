@@ -6,8 +6,11 @@ It contains only judge-relevant artifacts, docs, and a static mini-app shell for
 
 ## Live Demo
 - Public URL: `https://stabletown-xyz.github.io/hedera-apex-hackathon/`
+- Guided, non-destructive walkthrough of the Munus Lite workflow.
 - No login required.
-- Root URL redirects to the judge mini-app proof viewer.
+- Proof links and bundle flags come from the frozen strict-live submission bundle at `artifacts/hedera_apex_judge_demo_bundle.json`.
+- This is a submission mirror, not the full production application.
+- Root URL provides landing actions and auto-redirects to the guided mini-app.
 
 ## Fast Verification Path
 Run all mirror gates:
@@ -37,6 +40,7 @@ Start a static server from repo root:
 ```
 
 Then open:
+- `http://127.0.0.1:4173/`
 - `http://127.0.0.1:4173/frontend/apex-judge-miniapp/index.html`
 
 ## Proof Integrity

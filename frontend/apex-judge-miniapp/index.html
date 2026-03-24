@@ -3,30 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hedera Apex Judge Mini-App</title>
+    <title>Munus Lite Guided Demo — Hedera Apex</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="shell">
-      <header class="hero">
-        <p class="kicker">Hedera Apex</p>
-        <h1>Judge Mini-App</h1>
-        <p>Static proof viewer for exported submission artifacts.</p>
+      <header class="hero card">
+        <p class="kicker">Hedera Apex Submission Mirror</p>
+        <h1>Munus Lite Guided Judge Walkthrough</h1>
+        <p class="lede">
+          Buyer-side municipal distribution workflow, presented as a self-serve guided walkthrough for judges.
+        </p>
+        <p class="truth"><strong>No login required.</strong></p>
+        <p class="truth">
+          This hosted page is a guided walkthrough of the submitted Munus Lite workflow using frozen submission evidence.
+        </p>
+        <p class="truth">
+          Proof links and bundle flags are live references to the exported strict-live submission bundle.
+        </p>
+        <p class="truth">
+          Workflow states shown here are non-destructive and do not submit new on-chain actions.
+        </p>
       </header>
 
       <section class="card">
-        <h2>Bundle Status</h2>
+        <h2>How to Use This Demo</h2>
+        <ol class="plain-list">
+          <li>Pick persona + offering, then click through Step 1 to Step 4.</li>
+          <li>Review guided demo state cards for docs, disclosures, approvals, purchase, transfer, and coupon lifecycle.</li>
+          <li>Use Deployment + Proof and Proof Integrity panels for strict-live HTS + EVM evidence.</li>
+        </ol>
+      </section>
+
+      <section class="card controls">
+        <h2>Guided Controls</h2>
+        <nav id="stepper" class="stepper" aria-label="Four-step product framing"></nav>
+        <div class="selectors">
+          <label>
+            Persona
+            <select id="persona-select"></select>
+          </label>
+          <label>
+            Offering
+            <select id="offering-select"></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card" id="step-detail"></section>
+
+      <section class="card">
+        <h2>Workflow State Cards</h2>
+        <p class="muted">Guided demo state cards mirror the Munus Lite narrative and remain non-destructive.</p>
+        <div id="workflow-cards" class="workflow-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>Deployment + Proof Panel</h2>
+        <p class="muted">Precomputed submission evidence sourced from the strict-live export bundle.</p>
+        <pre id="deployment-summary">Loading...</pre>
+        <ul id="proof-links" class="proof-links"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Judge Walkthrough (Role Handoffs)</h2>
+        <div id="role-handoffs" class="handoffs"></div>
+      </section>
+
+      <section class="card">
+        <h2>What This Proves</h2>
+        <ul id="what-proves" class="plain-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Proof Integrity</h2>
         <pre id="status">Loading...</pre>
-      </section>
-
-      <section class="card">
-        <h2>Proof Flags</h2>
+        <h3>Proof Flags</h3>
         <ul id="flags"></ul>
+        <h3>Required Slots</h3>
+        <ul id="slots"></ul>
       </section>
 
-      <section class="card">
-        <h2>Required Slots</h2>
-        <ul id="slots"></ul>
+      <section class="card resources">
+        <h2>Submission Resources</h2>
+        <p><a href="../../docs/challenges/hedera-apex/submission-manifest.md">Submission Manifest</a></p>
+        <p><a href="../../artifacts/hedera_apex_judge_demo_bundle.json">Strict-Live Bundle JSON</a></p>
+        <p><a href="https://github.com/stabletown-xyz/hedera-apex-hackathon">Submission Mirror Repository</a></p>
       </section>
     </main>
 
