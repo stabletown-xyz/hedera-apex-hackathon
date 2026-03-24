@@ -1,0 +1,27 @@
+name: Mirror Verify
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify mirror package
+        run: |
+          chmod +x scripts/check_no_secrets.sh scripts/check_claim_hygiene.sh scripts/check_docs_links.sh scripts/verify_submission_bundle.sh
+          ./scripts/check_no_secrets.sh
+          ./scripts/check_claim_hygiene.sh
+          ./scripts/check_docs_links.sh
+          ./scripts/verify_submission_bundle.sh

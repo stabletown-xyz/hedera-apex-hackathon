@@ -1,0 +1,19 @@
+{
+  "source_ref": "eea9da5ebcc6bcb0d3a7859af8b107f3dd50f059",
+  "source_sha": "eea9da5ebcc6bcb0d3a7859af8b107f3dd50f059",
+  "exported_at": "2026-03-24T02:07:23Z",
+  "bundle_generated_at": "2026-03-24T02:05:59.215Z",
+  "bundle_sha256": "11e0dfaaeef98707bb07c02ca2975ea20795974d2119fd3055479c537ec1ea3d",
+  "strict_summary": {
+    "requested_mode": "live",
+    "effective_mode": "live",
+    "coverage": "both",
+    "proof_flags": {
+      "strict_live_passed": true,
+      "coverage_both": true,
+      "hts_proof_present": true,
+      "evm_proof_present": true,
+      "lifecycle_native_only": true
+    }
+  }
+}

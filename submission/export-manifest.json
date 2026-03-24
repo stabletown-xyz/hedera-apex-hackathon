@@ -1,0 +1,21 @@
+{
+  "source_repo_url": "https://github.com/stabletown-xyz/stabletown",
+  "source_ref": "eea9da5ebcc6bcb0d3a7859af8b107f3dd50f059",
+  "source_sha": "eea9da5ebcc6bcb0d3a7859af8b107f3dd50f059",
+  "exported_at": "2026-03-24T02:07:23Z",
+  "track": "hedera-apex",
+  "includes": [
+    "docs/challenges/hedera-apex/*",
+    "docs/api/v1.md",
+    "docs/events.md",
+    "artifacts/hedera_apex_judge_demo_bundle.json",
+    "frontend/apex-judge-miniapp/*",
+    "scripts/{verify_submission_bundle.sh,check_claim_hygiene.sh,check_docs_links.sh,check_no_secrets.sh}"
+  ],
+  "excludes": [
+    "apps/**",
+    "frontend/operator-console/**",
+    "private .env files",
+    "non-submission challenge modules"
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-03-24T02:05:59.215Z",
+  "track": "hedera-apex",
+  "requested_mode": "live",
+  "effective_mode": "live",
+  "strict_live_rehearsal": true,
+  "coverage": "both",
+  "fallback_reason": null,
+  "proof_flags": {
+    "strict_live_passed": true,
+    "coverage_both": true,
+    "hts_proof_present": true,
+    "evm_proof_present": true,
+    "lifecycle_native_only": true
+  },
+  "runtime": {
+    "hedera_network": "testnet",
+    "hedera_rpc_url": "https://testnet.hashio.io/api",
+    "hedera_runtime_mode": "cli",
+    "explorer_base_url": "https://hashscan.io/testnet"
+  },
+  "frontend": {
+    "tenant_id": "33333333-3333-4333-8333-333333333331",
+    "program_id": "a88e662b-a511-4de7-92d3-5ee7b9c9cb71",
+    "route": "/munus/offerings"
+  },
+  "smoke": {
+    "results": [
+      {
+        "mode": "hts",
+        "tx_intent_id": "50d16a9e-a687-49b4-b0d8-d982392cd646",
+        "offering_id": "8e044aa1-adbc-49a6-85e0-9f2e671c2f41",
+        "deployment_id": "521654d6-6e65-46c5-a11b-783e20b70f75",
+        "deploy_execution_path": "hts_controller_native",
+        "hts_token_id": "0.0.8353443",
+        "hts_token_address": "0x00000000000000000000000000000000007f76A3",
+        "evm_contract_address": null,
+        "open_execution_path": "hts_controller_native",
+        "close_execution_path": "hts_controller_native",
+        "deploy_tx_hash": "0x12227423c1c75a39979cc736ab48eeb9aae3e2bef7c2fc8068e0058409b5e0fe",
+        "open_tx_hash": "0x2b7c21d6a890e57af6c176ab6b3ab05e64638d90a430a63e03dd9a84db8963ae",
+        "close_tx_hash": "0x55a1f62ac337923f8e247572e2bd5ae2e35e221d3652a81dfec1db6a01d154f9",
+        "lifecycle_native_only": true,
+        "offering_status": "closed"
+      },
+      {
+        "mode": "evm",
+        "tx_intent_id": "9d4570ca-6818-4233-929e-9f7f7813cd9d",
+        "offering_id": "b5ac335b-b239-420c-afbb-3b33a8cfe313",
+        "deployment_id": "5d54158e-31f4-45a6-80b9-85fb37f36937",
+        "deploy_execution_path": "evm_contract_native",
+        "hts_token_id": null,
+        "hts_token_address": null,
+        "evm_contract_address": "0x1a4d56faDbE5567E95a8C010a3f898E4892fC988",
+        "open_execution_path": "hts_controller_native",
+        "close_execution_path": "hts_controller_native",
+        "deploy_tx_hash": "0x93f76c6abbe1155ec21853b0dc13aa531d392e4c888743e85defb00a004aecbf",
+        "open_tx_hash": "0xe85e242bd51c810d209324616c9319ef0010ca33ca3a7b0b3151552cc50054cb",
+        "close_tx_hash": "0x7d1e7bb997d3dce4ec2c240247be0f3562e43dc4e6c76f276c6bf7358a5a41a2",
+        "lifecycle_native_only": true,
+        "offering_status": "closed"
+      }
+    ],
+    "proof_summary": {
+      "coverage": "both",
+      "hts_proof_present": true,
+      "evm_proof_present": true,
+      "lifecycle_native_only": true,
+      "native_execution_paths": [
+        {
+          "mode": "hts",
+          "deploy": "hts_controller_native",
+          "open": "hts_controller_native",
+          "close": "hts_controller_native"
+        },
+        {
+          "mode": "evm",
+          "deploy": "evm_contract_native",
+          "open": "hts_controller_native",
+          "close": "hts_controller_native"
+        }
+      ]
+    },
+    "evidence_summary": {
+      "offering_id": "8e044aa1-adbc-49a6-85e0-9f2e671c2f41",
+      "deployment_row_status": "confirmed",
+      "tx_intent_present": true,
+      "signoff_evidence_status": null
+    }
+  },
+  "links": {
+    "hts": {
+      "deploy_tx": "https://hashscan.io/testnet/transaction/0x12227423c1c75a39979cc736ab48eeb9aae3e2bef7c2fc8068e0058409b5e0fe",
+      "open_tx": "https://hashscan.io/testnet/transaction/0x2b7c21d6a890e57af6c176ab6b3ab05e64638d90a430a63e03dd9a84db8963ae",
+      "close_tx": "https://hashscan.io/testnet/transaction/0x55a1f62ac337923f8e247572e2bd5ae2e35e221d3652a81dfec1db6a01d154f9",
+      "token_id": "0.0.8353443",
+      "token_id_url": "https://hashscan.io/testnet/token/0.0.8353443",
+      "token_address": "0x00000000000000000000000000000000007f76A3",
+      "token_address_url": "https://hashscan.io/testnet/address/0x00000000000000000000000000000000007f76A3"
+    },
+    "evm": {
+      "deploy_tx": "https://hashscan.io/testnet/transaction/0x93f76c6abbe1155ec21853b0dc13aa531d392e4c888743e85defb00a004aecbf",
+      "open_tx": "https://hashscan.io/testnet/transaction/0xe85e242bd51c810d209324616c9319ef0010ca33ca3a7b0b3151552cc50054cb",
+      "close_tx": "https://hashscan.io/testnet/transaction/0x7d1e7bb997d3dce4ec2c240247be0f3562e43dc4e6c76f276c6bf7358a5a41a2",
+      "contract_address": "0x1a4d56faDbE5567E95a8C010a3f898E4892fC988",
+      "contract_address_url": "https://hashscan.io/testnet/address/0x1a4d56faDbE5567E95a8C010a3f898E4892fC988"
+    }
+  },
+  "required_slots": [
+    {
+      "slot": "hts_deploy_tx",
+      "attached": true,
+      "explorer_url": "https://hashscan.io/testnet/transaction/0x12227423c1c75a39979cc736ab48eeb9aae3e2bef7c2fc8068e0058409b5e0fe",
+      "reference": {
+        "tx_hash": "0x12227423c1c75a39979cc736ab48eeb9aae3e2bef7c2fc8068e0058409b5e0fe"
+      }
+    },
+    {
+      "slot": "evm_deploy_tx",
+      "attached": true,
+      "explorer_url": "https://hashscan.io/testnet/transaction/0x93f76c6abbe1155ec21853b0dc13aa531d392e4c888743e85defb00a004aecbf",
+      "reference": {
+        "tx_hash": "0x93f76c6abbe1155ec21853b0dc13aa531d392e4c888743e85defb00a004aecbf"
+      }
+    },
+    {
+      "slot": "hts_token_identifier",
+      "attached": true,
+      "explorer_url": "https://hashscan.io/testnet/token/0.0.8353443",
+      "reference": {
+        "token_id": "0.0.8353443",
+        "token_address": "0x00000000000000000000000000000000007f76A3"
+      }
+    },
+    {
+      "slot": "evm_contract_address",
+      "attached": true,
+      "explorer_url": "https://hashscan.io/testnet/address/0x1a4d56faDbE5567E95a8C010a3f898E4892fC988",
+      "reference": {
+        "contract_address": "0x1a4d56faDbE5567E95a8C010a3f898E4892fC988"
+      }
+    },
+    {
+      "slot": "native_lifecycle_paths",
+      "attached": true,
+      "explorer_url": null,
+      "reference": {
+        "lifecycle_native_only": true
+      }
+    }
+  ],
+  "artifacts": {
+    "smoke_log_path": "/var/folders/c7/wr5766cs56j1jlwxvk8dpzhh0000gp/T/hedera_munus_judge_smoke.XXXXXX.log.1lETGgRe"
+  }
+}

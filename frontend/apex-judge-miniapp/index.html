@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hedera Apex Judge Mini-App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="kicker">Hedera Apex</p>
+        <h1>Judge Mini-App</h1>
+        <p>Static proof viewer for exported submission artifacts.</p>
+      </header>
+
+      <section class="card">
+        <h2>Bundle Status</h2>
+        <pre id="status">Loading...</pre>
+      </section>
+
+      <section class="card">
+        <h2>Proof Flags</h2>
+        <ul id="flags"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Required Slots</h2>
+        <ul id="slots"></ul>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
