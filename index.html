@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Munus Lite — Hedera Apex Judge Demo</title>
+    <meta
+      http-equiv="refresh"
+      content="2; url=./frontend/apex-judge-miniapp/index.html"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(180deg, #f3f7fb 0%, #ffffff 100%);
+        color: #1f2937;
+      }
+      main {
+        max-width: 720px;
+        margin: 8vh auto;
+        padding: 1.5rem;
+      }
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+      p {
+        margin: 0.5rem 0;
+      }
+      .card {
+        margin-top: 1rem;
+        padding: 1rem 1.1rem;
+        background: #ffffff;
+        border: 1px solid #dbe4ee;
+        border-radius: 0.75rem;
+      }
+      a {
+        color: #0f4ea8;
+      }
+      .muted {
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Munus Lite — Hedera Apex Judge Demo</h1>
+      <p>
+        Public proof viewer for the Hedera Apex submission mirror.
+      </p>
+      <p><strong>No login required.</strong></p>
+
+      <section class="card">
+        <p class="muted">
+          Redirecting to the judge mini-app...
+        </p>
+        <p>
+          If redirect does not run, open
+          <a href="./frontend/apex-judge-miniapp/index.html"
+            >Judge Mini-App</a
+          >.
+        </p>
+      </section>
+
+      <section class="card">
+        <p>Optional submission references:</p>
+        <p>
+          <a href="./docs/challenges/hedera-apex/submission-manifest.md"
+            >Submission Manifest</a
+          >
+        </p>
+        <p>
+          <a href="./artifacts/hedera_apex_judge_demo_bundle.json"
+            >Strict-Live Bundle JSON</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <script>
+      window.location.replace("./frontend/apex-judge-miniapp/index.html");
+    </script>
+  </body>
+</html>

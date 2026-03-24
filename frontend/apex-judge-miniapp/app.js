@@ -1,4 +1,4 @@
-const BUNDLE_PATH = "../../artifacts/hedera_apex_judge_demo_bundle.json";
+const BUNDLE_URL = new URL("../../artifacts/hedera_apex_judge_demo_bundle.json", import.meta.url);
 const REQUIRED_SLOTS = ["hts_deploy_tx", "evm_deploy_tx", "hts_token_identifier", "evm_contract_address", "native_lifecycle_paths"];
 
 function renderList(id, rows) {
@@ -15,7 +15,7 @@ function renderList(id, rows) {
 async function run() {
   const status = document.getElementById("status");
   try {
-    const response = await fetch(BUNDLE_PATH, { cache: "no-store" });
+    const response = await fetch(BUNDLE_URL, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -47,7 +47,7 @@ async function run() {
       }))
     );
   } catch (error) {
-    status.textContent = `Failed to load bundle at ${BUNDLE_PATH}\n${String(error)}`;
+    status.textContent = `Failed to load bundle at ${BUNDLE_URL.href}\n${String(error)}`;
     renderList("flags", []);
     renderList("slots", []);
   }

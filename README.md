@@ -4,6 +4,11 @@
 This repository is a submission-focused mirror for Hedera Apex judging.
 It contains only judge-relevant artifacts, docs, and a static mini-app shell for proof inspection.
 
+## Live Demo
+- Public URL: `https://stabletown-xyz.github.io/hedera-apex-hackathon/`
+- No login required.
+- Root URL redirects to the judge mini-app proof viewer.
+
 ## Fast Verification Path
 Run all mirror gates:
 
